@@ -66,9 +66,105 @@
     <h2> link 태그</h2>
   </header>
   <section>
-    <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">HTML Link</a>
+    <!-- 절대경로 -->
+    <a href="https://www.naver.com" target="_blank">HTML Link</a>
+    <!-- 상대경로 -->
+    <a href="./01-layout.html">layout.html</a>
+    <a href="./images/01-01-daisy-w.jpeg">daisy image</a>
+    <a href="images/01-01-daisy-w.jpeg">daisy image2</a>
+    <a href="maillto:1choijia1@naver.com">1choijia1@naver.com</a>
+    <!-- 웹접근성 -->
+    <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
+  </section>
+  <a href="#main">main 바로가기</a>
+  <a href="./sub/sub.html#sec3"> id 값이 sec3</a>
+  <a href="./sub/sub.html#sec2"> id 값이 sec2</a>
+
+  <header>
+    <h2>images 태그</h2>
+  </header>
+  <section>
+    <!-- 상대경로 -->
+    <!-- width, height 속성엔 단위 생략 -->
+    <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200">
+    <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;">
+    <!-- 절대경로 -->
+    <a href="https://www.lottecastle.co.kr/main/index.do" target="_blink" title="새창열림">
+      <img src="https://ssl.pstatic.net/melona/libs/1449/1449003/48a33841c0a058ea0775_20230518163042864.jpg" alt="lotte castle 광진 랜드마크 한강의 시그니처 / 구의역 롯데캐슬 이스트폴 / 6월 open 예정 / 1533-1616" width="100%">
+    </a>
+    
+    <!-- 반응형 이미지 -->
+    <picture>
+      <!-- width 650px 이상일 경우 -->
+      <source media="(min-width: 650px)" srcset="./images/img_food.jpg">
+      <!-- width 465px 이상일 경우 -->
+      <source media="(min-width: 465px)" srcset="./images/img_car.jpg">
+      <img src="./images/img_girl.jpg" alt="뒷통수 아줌마" width="100%">
+    </picture>
   </section>
 
+  <header>
+    <h2>table 태그</h2>
+  </header>
+  <section>
+    <table>
+      <caption>테이블 설명 : 자세한 설명</caption>
+      <colgroup>
+        <col width="40%">
+        <col span="3">
+      </colgroup>
+      <thead>
+        
+      </thead>
+    </table>
+  </section>
+
+
+
+
+
+
+  <section id="nav">
+    <h2>nav</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section>
+    <h2>c1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+  </section>
+  <section id="main">
+    <h2>main</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non rem laborum aspernatur enim eius maxime dicta aut suscipit ex nemo vel ipsa expedita, molestias ullam quaerat nulla, facere iusto perspiciatis!</p>
+    <a href="#nav">nav 바로가기</a>
+  </section>
 
   </div>
   <!-- 주석 태그 -->
