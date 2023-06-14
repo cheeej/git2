@@ -1,13 +1,14 @@
 <!-- 문서의 형식 선언(HTML5) -->
 <!DOCTYPE html>
-<!-- 한국어 : Ko -->
+<!-- 한국어 : ko -->
 <html lang="ko">
   <!-- head : 페이지 설정 -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naver</title>
-  <meta name="og:title" content="네이버">
+  <title>NAVER</title>
+  <meta name="description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+  <meta property="og:title" content="네이버">
   <meta property="og:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
   <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
   <meta property="og:url" content="https://www.naver.com/">
@@ -18,13 +19,13 @@
   <!-- 파비콘 설정 -->
   <link rel="icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
 
-  <!-- Internal css -->
+  <!-- Internal CSS -->
   <style>
     header {
       border-bottom: 3px solid #ecdc4e;
     }
   </style>
-  <!--  External CSS : 이거 사용--> 
+  <!-- External CSS : 이거 사용 --> 
   <link rel="stylesheet" href="./css/comm.css">
   
 </head>
@@ -75,10 +76,10 @@
     <a href="maillto:1choijia1@naver.com">1choijia1@naver.com</a>
     <!-- 웹접근성 -->
     <a href="https://www.naver.com" target="_blank" title="새창열림">네이버</a>
-  </section>
   <a href="#main">main 바로가기</a>
   <a href="./sub/sub.html#sec3"> id 값이 sec3</a>
   <a href="./sub/sub.html#sec2"> id 값이 sec2</a>
+</section>
 
   <header>
     <h2>images 태그</h2>
@@ -89,7 +90,7 @@
     <img src="./images/01-01-daisy-w.jpeg" alt="daisy" width="200">
     <img src="./images/01-01-daisy-w.jpeg" alt="daisy" style="width: 300px;">
     <!-- 절대경로 -->
-    <a href="https://www.lottecastle.co.kr/main/index.do" target="_blink" title="새창열림">
+    <a href="https://www.lottecastle.co.kr/main/index.do" target="_blank" title="새창열림">
       <img src="https://ssl.pstatic.net/melona/libs/1449/1449003/48a33841c0a058ea0775_20230518163042864.jpg" alt="lotte castle 광진 랜드마크 한강의 시그니처 / 구의역 롯데캐슬 이스트폴 / 6월 open 예정 / 1533-1616" width="100%">
     </a>
     
@@ -108,17 +109,218 @@
   </header>
   <section>
     <table>
+      <!-- 웹접근성 요건 추가 -->
       <caption>테이블 설명 : 자세한 설명</caption>
+      <!-- 열의 가로 사이즈 -->
       <colgroup>
-        <col width="40%">
-        <col span="3">
+        <col>
+        <col width="20%">
+        <col span="4" width="10%">
       </colgroup>
-      <thead>
-        
+      <!-- 테이블의 구분 -->
+      <thead> 
+        <tr>
+          <th scope="col" rowspan="2" colspan="2">과목</th>
+          <th scope="col" colspan="4">1-1</th>
+        </tr>
+        <tr>
+          <th scope="col">수지</th>
+          <th scope="col">사라</th>
+          <th scope="col">지수</th>
+          <th scope="col">애나</th>
+        </tr>
       </thead>
+      <!-- 테이블의 본문 -->
+      <tbody>
+        <tr>
+          <th scope="row" rowspan="3">공통</th>
+          <th scope="row">국어</th>
+          <td>100</td>
+          <td>90</td>
+          <td>70</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <th scope="row">영어</th>
+          <td>90</td>
+          <td>70</td>
+          <td>100</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <th scope="row">수학</th>
+          <td>60</td>
+          <td>80</td>
+          <td>90</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+      <!-- 테이블의 요약 -->
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">평균점수</th>
+          <td>90</td>
+          <td>90</td>
+          <td>90</td>
+          <td>999</td>
+        </tr>
+      </tfoot>
     </table>
   </section>
+  <style>
+    table, tr, td, th{
+      border: 3px solid #0d6e00;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      height: 20px;
+    }
+    thead {
+      background: #f1bd0f;
+    }
+    tfoot {
+      background: #ffed92;
+    }
+    th {
 
+    }
+  </style>
+
+  <header>
+    <h2>list 태그</h2>
+  </header>
+  <section>
+    <h3>좋아하는 동물</h3>
+    <!-- 순서 없는 목록 -->
+    <ul>
+      <li>강아지</li>
+      <li>퓨마</li>
+      <li>고양이</li>
+    </ul>
+
+    <!-- 순서가 있는 목록 -->
+    <ol>
+      <li>강아지</li>
+      <li>고양이</li>
+      <li>퓨마</li>
+    </ol>
+
+    <!-- nav -->
+    <h3>메인 메뉴</h3>
+    <!-- depth1 -->
+    <ul>
+      <li>
+        탑
+        <!-- depth2 -->
+        <ul>
+          <li>
+            블라우스
+            <ul>
+              <li>depth3</li>
+              <li>depth3</li>
+              <li>depth3</li>
+            </ul>
+          </li>
+          <li>티</li>
+          <li>셔츠 </li>
+          <li>니트</li>
+        </ul>
+      </li>
+      <li>
+        아우터
+        <ul>
+          <li>자켓</li>
+          <li>코트</li>
+          <li>
+            가디건
+            <ul>
+            <li>depth3</li>
+            <li>depth3</li>
+            <li>depth3</li>
+            </ul>
+          </li>
+          <li>머플러</li>
+        </ul>
+      </li>
+      <li>
+        팬츠
+        <ul>
+          <li>청바지</li>
+          <li>짧은바지</li>
+          <li>긴바지</li>
+          <li>레깅스</li>
+        </ul>
+      </li>
+      <li>
+        악세서리
+        <ul>
+          <li>귀고리</li>
+          <li>목걸이</li>
+          <li>반지</li>
+          <li>팔찌</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+            <ul>
+              <li>
+                <a href="#">depth3</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">depth2</a>
+            <ul>
+              <li>
+                <a href="#">depth3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">depth1</a>
+        <ul>
+          <li>
+            <a href="#">depth2</a>
+          </li>
+          <li>
+            <a href="#">depth222</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
 
 
@@ -169,6 +371,6 @@
   </div>
   <!-- 주석 태그 -->
   <!-- <p>안녕 난 최은지야.</p> -->
-  <p>안녕 난 <!-- 최은지야. -->
+  <p>안녕 난 <!-- 최은지야. --></p>
 </body>
 </html>
