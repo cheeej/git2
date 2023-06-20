@@ -25,8 +25,8 @@
     <form action="">
       <div class="terms_item">
         <div class="inp">
-          <input type="checkbox" name="" id="check1" />
-          <label for="check1">네이버 이용약관</label>
+          <input type="checkbox" name="" id="check1" required />
+          <label for="check1">[필수 선택] 네이버 이용약관</label>
         </div>
         <div class="box">
           여러분을 환영합니다. 네이버 서비스 및 제품(이하 ‘서비스’)을 이용해
@@ -38,8 +38,9 @@
         </div>
       </div>
 
-      <!-- submit 버튼 클릭시 상단에 있는 정보가 전송 -->
+      
       <div class="terms_item">
+      <!-- submit 버튼 클릭시 상단에 있는 정보가 전송 -->
         <input type="checkbox" name="terms2" id="terms2" />
         <label form="terms2">개인정보 수집 및 이용</label>
       </div>
@@ -49,7 +50,7 @@
     <form action="">
       <div>
         <label for="id">아이디</label>
-        <input type="text" name="id" id="id" placeholder="10자 이하" maxlength="10" />
+        <input type="text" name="id" id="id" placeholder="10자 이하" maxlength="10" required autofocus/>
       </div>
       <div>
         <label for="pw">비밀번호</label>
