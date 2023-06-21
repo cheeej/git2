@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상선택자 | css</title>
+    <style>
+      /* reset */
+      * {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상선택자</h1>
+
+    <h2>순서</h2>
+    <ul class="lst-">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      .lst- {
+        border: 5px solid greenyellow;
+      }
+      .lst- li {
+        border: 1px solid #1b5e15;
+        margin: 5px;
+      }
+      .lst- li:first-child {
+        background: #ffea8d;
+      }
+      .lst- li:nth-child(2) {
+        background: #8cff2e;
+      }
+      .lst- li:nth-child(3) {
+        background: #80d0ff;
+      }
+      .lst- li:last-child {
+        background: #f5ddff;
+      }
+      .lst- li:hover {
+        background: #00000062;
+        color: #ffffff;
+      }
+    </style>
+
+    <h2>링크 가상선택자</h2>
+    <a href="#">링크 가상선택자</a>
+    <style>
+      a {
+        font-size: 20px;
+        color: #383838;
+      }
+      /* 거의 안씀 a:link {} */
+      a:hover {
+        color: rgb(255, 63, 63);
+      }
+      a:active {
+        color: greenyellow;
+      }
+      /* a:visited {color: #80d0ff;} */
+    </style>
+
+    <h2>가상 엘리먼트 선택자</h2>
+    <ul class="lst2">
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+      <li><a href="#">공지사항글</a></li>
+    </ul>
+    <style>
+      .lst2 a::before {
+        content: "before";
+      }
+      .lst2 a::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: #2a04ff;
+        margin-left: 5px;
+        margin-bottom: 5px;
+      }
+      .lst2 a {
+        color: rgb(255, 163, 163);
+      }
+      .lst2 li::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: #000;
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+      .lst2 li::after {
+        content: ">>>";
+      }
+    </style>
+
+    <ul class="lst3">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      .lst3 {
+        display: flex;
+      }
+      .lst3 li::after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #1b5e15;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .lst3 li:last-child::after {
+        display: none;
+      }
+      .lst3::before {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: #ffb8b8;
+        margin-right: 10px;
+      }
+      .lst3::after {
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 30px;
+        background: #ffb8b8;
+        margin-left: 10px;
+      }
+    </style>
+  </body>
+</html>
