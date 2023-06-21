@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성선택자 | css</title>
+  </head>
+  <body>
+    <h1>속성선택자</h1>
+    <input type="text" id="id" name="id" placeholder="아이디" />
+    <input type="password" id="pw" name="pw" placeholder="비밀번호" />
+    <style>
+      input {
+        height: 50px;
+        border: 5px solid #30b3ff;
+        background: #ffe2e2;
+      }
+      input:focus {
+        border: 5px solid #fffeaf;
+        background: #b61dc4;
+      }
+    </style>
+  </body>
+</html>
