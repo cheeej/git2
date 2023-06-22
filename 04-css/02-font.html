@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font | css</title>
+    <!-- 웹디자인 기능사 reset -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        color: #222328;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        /* 안전 글꼴 */
+        font-family: "Malgun Gothic", "맑은 고딕", helvetica,
+          "Apple SD Gothic Neo", sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>font</h1>
+
+    <h2>일반</h2>
+    <div class="font1">
+      <strong>타이틀</strong>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+        quisquam nisi pariatur ipsum expedita distinctio, tenetur dolores sed
+        quis quaerat provident architecto nobis, rerum, beatae vero? Ut impedit
+        facilis veritatis.<br />
+        모든 인류 구성원의 천부의 존엄성과 동등하고 양도할 수 없는 권리를
+        인정하는
+      </p>
+      <!-- em태그 절대값 60px -->
+      <em
+        >기울어짐<br />
+        <span>기울어짐</span> </em
+      ><br />
+      <!-- b태그 상대값 60px(기준 14px) -->
+      <b>
+        기울어짐<br />
+        <span>기울어짐</span>
+      </b>
+    </div>
+    <style>
+      .font1 strong {
+        font-family: "Orbit", sans-serif;
+        font-size: 40px;
+        font-weight: normal;
+      }
+
+      .font1 em {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+      }
+      .font1 p {
+        font-size: 1em;
+      }
+      .font1 em span {
+        font-size: 60px;
+      }
+      .font1 b {
+        font-size: 3.75em;
+      }
+      .font1 b span {
+        font-size: 3.75em;
+      }
+    </style>
+  </body>
+</html>
