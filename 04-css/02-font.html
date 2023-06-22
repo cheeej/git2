@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>font | css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Norican&display=swap"
+      rel="stylesheet"
+    />
     <!-- 웹디자인 기능사 reset -->
     <style>
       * {
@@ -11,7 +17,7 @@
         padding: 0;
         line-height: 1.5;
         color: #222328;
-        text-decoration: none;
+        /* text-decoration: none; */
         list-style: none;
         box-sizing: border-box;
         /* 안전 글꼴 */
@@ -55,20 +61,58 @@
 
       .font1 em {
         font-style: normal;
-        font-weight: bold;
+        /* font-weight: bold; */
         font-size: 60px;
-      }
-      .font1 p {
-        font-size: 1em;
       }
       .font1 em span {
-        font-size: 60px;
+        /* font-size : 60px; */
+        /* em 엄마 태그를 기준으로  */
+        font-size: 1em;
       }
       .font1 b {
+        /* font-size : 60px; */
         font-size: 3.75em;
       }
       .font1 b span {
-        font-size: 3.75em;
+        /* font-size : 16px; */
+        /* rem html, body 폰트 태그 기준 */
+        font-size: 1em;
+      }
+    </style>
+
+    <h2>font size</h2>
+    <strong>vw</strong>
+    <div class="vw">Responsive Text</div>
+    <div class="vh">Responsive Text</div>
+    <style>
+      .vw {
+        font-size: 10vw;
+        font-family: "Cinzel Decorative", cursive;
+      }
+      .vh {
+        font-size: 10vh;
+        font-family: "Norican", cursive;
+      }
+    </style>
+
+    <h2>text</h2>
+    <strong>vertical align</strong>
+    <div class="ver"><img src="./images/111.png" alt="home" />home</div>
+    <style>
+      .ver {
+        font-size: 30px;
+      }
+      .ver img {
+        vertical-align: middle;
+        margin-top: -10px;
+      }
+    </style>
+
+    <strong>decoration</strong>
+    <a href="#">글씨글씨 난 글씨야 넌 뭐니?</a>
+    <style>
+      a {
+        text-decoration: none;
       }
     </style>
   </body>
