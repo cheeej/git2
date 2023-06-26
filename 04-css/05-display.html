@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display | css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+        text-decoration: none;
+        line-height: 1.5;
+        color: rgb(26, 26, 26);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display</h1>
+
+    <h2>block(기본값)</h2>
+    <div class="box1">글씨</div>
+    <div class="box1">글씨</div>
+    <style>
+      .box1 {
+        /* display: block; 기본값 거의 block*/
+        width: 200px;
+        height: 100px;
+        background: #ff8787;
+      }
+    </style>
+
+    <h2>
+      inline(글자 한개 개념) / inline-block(가로세로 값 가능, 글자처럼 옆으로
+      배치)
+    </h2>
+    <!-- "div" block태그/ "a" inline 태그 대표적// inline-block_대신 글자처럼 스페이스도 들어감-->
+    <a href="#" class="box2">링크1</a>
+    <a href="#" class="box2">링크2</a>
+    <a href="#" class="box2">링크3</a>
+    <style>
+      .box2 {
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        background: #6b6b6b;
+        border: 1px solid #f0ff17;
+        border-radius: 10px;
+      }
+    </style>
+
+    <h2>none(컨텐츠 없앰)</h2>
+    <div class="box3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box3 {
+        /* 스페이스 없이 가로 정렬 : display: flex; */
+        display: flex;
+      }
+      .box3 div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        background: #c1ffbb;
+      }
+      /* none : 아예 없앰 / hidden : 자리 잡고 있지만, 숨기는 것 - ex: 네비 메뉴, 모달창(거의 none 사용) */
+      /* none의 문제, 시각 장애인 아예 안읽혀지는 문제 -> hidden */
+      .box3 div:first-child {
+        display: none;
+      }
+      .box3 div:nth-child(2) {
+        visibility: hidden;
+      }
+
+      /* block 요소, 기본적으로 아래로 정렬됨 -> flex로 가로 정렬 가능 */
+      /* float: left;(구버전) -> flex upgrade버전으로, 반응형일 때 多 작업됨 */
+    </style>
+    <h2>flex</h2>
+    /* ★★★중요★★★ */
+    <div class="box-g box4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <style>
+      /* 공통 클래스 */
+      .box-g {
+        margin-bottom: 30px;
+        background: #8293b1;
+        padding: 20px;
+      }
+      .box-g div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        background: #ffaaaa;
+      }
+      .box4 {
+        display: flex;
+      }
+      .box4 div {
+        margin-right: 10px;
+      }
+      .box4 div:nth-child(4) {
+        margin-right: 0px;
+      }
+    </style>
+
+    <!-- 엄마에게 들어가는 모든 속성 Container -->
+    <div class="box-g box5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box5 {
+        display: flex; /* 가로 방향 */
+        flex-direction: row-reverse;
+        /* column : 세로 방향 / column-reverse 뒤집어서 세로 방향 / column-row : 다시 가로 버전 change/ row-reverse : 거꾸로 가로 버전 */
+      }
+    </style>
+
+    <div class="box-g box6">
+      <!-- div{$}*12 -->
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <style>
+      .box6 {
+        /* flex - 무조건 가로정렬이라, 가로 사이즈 무시됨 */
+        display: flex;
+        /* fl+oo 약어 */
+        flex-wrap: wrap; /* wrap가로 사이즈 살리면서, 밑으로 내려감// nowrap(디폴트값으로 안적어도 됨) : 디자인상 밑으로 떨어지지x 옆으로 펼칠 경우 */
+      }
+    </style>
+
+    <div class="box-g box7">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box7 {
+        display: flex;
+        justify-content: center; /* ★★★중요★★★ */
+      }
+    </style>
+
+    <div class="box-g box8">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box8 {
+        display: flex;
+        justify-content: flex-start;
+      }
+    </style>
+
+    <div class="box-g box9">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box9 {
+        display: flex;
+        justify-content: flex-end;
+      }
+    </style>
+    <div class="box-g box10">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box10 {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+    <br /><br /><br />
+  </body>
+</html>
