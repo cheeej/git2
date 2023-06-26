@@ -46,6 +46,7 @@
         height: 100px;
         text-align: center;
         line-height: 100px;
+        /* 박스안의 텍스트 세로 중앙 정렬 = 박스 길이와 동일하게 적용 */
         background: #6b6b6b;
         border: 1px solid #f0ff17;
         border-radius: 10px;
@@ -186,6 +187,7 @@
         justify-content: flex-end;
       }
     </style>
+
     <div class="box-g box10">
       <div>1</div>
       <div>2</div>
@@ -197,6 +199,53 @@
         justify-content: space-around;
       }
     </style>
+
+    <div class="box-g box11">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box11 {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <div class="box-g box12">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box12 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
+    </style>
+
+    <!-- 자식 안에 넣어주는 코드 -->
+    <h2>items</h2>
+    <div class="box-g box13">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <!-- order : 순서 바꿈/ 무조건 flex 상태에서 적용됨/ 반응형에 多 사용 -->
+    <style>
+      .box13 {
+        display: flex;
+      }
+      .box13 div:first-child {
+        order: 2;
+      }
+      .box13 div:nth-child(2) {
+        order: 3;
+      }
+    </style>
+
     <br /><br /><br />
   </body>
 </html>
