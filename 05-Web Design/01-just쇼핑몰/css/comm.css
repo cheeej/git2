@@ -21,5 +21,33 @@
   justify-content: space-between; /* header에서 무조건 사용 */
 }
 .logo {
-  background: #72a0b3;
+  display: flex;
+  align-items: center;
+}
+.logo a {
+  display: block;
+  width: 200px;
+  height: 40px;
+}
+.gnb .depth1 {
+  display: flex;
+}
+
+.gnb .depth1 a {
+  display: block;
+  line-height: 100px;
+  text-align: center;
+  height: 100px;
+  padding: 0 50px;
+  /* 마진을 넣을 경우,
+  .depth1 li {
+    margin-left: 50px; -> 너무 얅아 사용x */
+  /*  동일>> 1. display: block;
+                height: 100px
+                line-height: 100px 
+             2. display: flex;
+                aline-items: center; -> text-align 안먹음/
+}
+.gnb .depth2 {
+  /* display: none; */
 }
