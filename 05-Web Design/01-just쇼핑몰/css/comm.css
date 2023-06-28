@@ -16,7 +16,7 @@
 }
 .header {
   height: 100px;
-  background: #c99e9e;
+  background: #fafafa;
   display: flex;
   justify-content: space-between; /* header에서 무조건 사용 */
 }
@@ -33,21 +33,77 @@
   display: flex;
 }
 
-.gnb .depth1 a {
+.gnb .depth1 > li > a {
   display: block;
-  line-height: 100px;
-  text-align: center;
   height: 100px;
   padding: 0 50px;
-  /* 마진을 넣을 경우,
+  line-height: 100px;
+  text-align: center;
+}
+/* 마진을 넣을 경우,
   .depth1 li {
-    margin-left: 50px; -> 너무 얅아 사용x */
+    margin-left: 50px; -> 너무 얅아 사용x 
   /*  동일>> 1. display: block;
                 height: 100px
                 line-height: 100px 
              2. display: flex;
-                aline-items: center; -> text-align 안먹음/
+                justify-content: center; -> text-align 안먹음//nav에 잘 사용x/
+             3.flex- 레이아웃 잡을 때 사용
+                여기서는 block으로 처리*/
+
+.gnb .depth1 > li > a:hover {
+  color: rgb(230, 230, 230);
+  border-bottom: 3px solid #df6d6d;
 }
+.gnb .depth1:hover .depth2 {
+  display: block;
+}
+
 .gnb .depth2 {
-  /* display: none; */
+  display: none;
+  padding: 10px 0;
+  /* 무조건 패딩으로, 마진으로x */
+  background: #fff;
+}
+.gnb .depth2 a:hover {
+  border-bottom: 3px solid #8b3535;
+  background: rgb(211, 211, 211);
+}
+.gnb .depth2 a {
+  display: block;
+  /* block요소는 본래 100%이기에 width: 100%; 쓸 필요x  */
+  text-align: center;
+  padding: 10px 0;
+  height: 40px;
+  background: #fff;
+  /* padding: 10px 0;뺄 경우, lien-height(높이값만큼 40px) 로 새로 가운데 정렬해줘야함 */
+}
+/* slide */
+.slide {
+  overflow: hidden;
+  height: 300px;
+}
+.slide a,
+.slide img {
+  display: block;
+}
+
+/* contents */
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.tabs {
+  width: 340px;
+}
+.bnr {
+  width: 400px;
+}
+.bnr a,
+.bnr img {
+  display: block;
+}
+.goto {
+  width: 340px;
 }
