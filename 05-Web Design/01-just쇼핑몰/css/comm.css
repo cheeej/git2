@@ -95,7 +95,8 @@
   padding: 10px 0;
 }
 .tabs {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
+  /* width: 340px */
 }
 .bnr {
   width: 400px;
@@ -105,5 +106,25 @@
   display: block;
 }
 .goto {
-  width: 340px;
+  width: calc(100% / 2 - 230px);
+  /* width: 340px */
+}
+.goto ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 180px;
+}
+.goto li {
+  width: calc(50% - 5px);
+  height: calc(50% - 5px);
+  /* = width: 48% */
+}
+.goto a {
+  display: flex;
+  height: 100%;
+  background: #caa078;
+  justify-content: center;
+  align-items: center;
 }
