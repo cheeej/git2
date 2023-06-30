@@ -199,7 +199,7 @@
 .goto a {
   display: flex;
   height: 100%;
-  background: #caa078;
+  background: #d8b390;
   justify-content: center;
   align-items: center;
 }
@@ -227,5 +227,5 @@
 .logo-foot a {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 100px;
 }
