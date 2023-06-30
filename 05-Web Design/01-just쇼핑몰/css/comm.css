@@ -12,7 +12,7 @@
   /* wrap / header 블록요소이기에 width 100% -> 안넣어도 됨 */
   width: 1200px;
   margin: 0 auto;
-  background: #f0f0f0;
+  /* background: #f0f0f0; */
 }
 .header {
   height: 100px;
@@ -94,18 +94,93 @@
   justify-content: space-between;
   padding: 10px 0;
 }
-.tabs {
+/* tab */
+.tabs-wrap {
+  display: flex;
   width: calc(100% / 2 - 230px);
-  /* width: 340px */
+  position: relative;
+  /* width: 340px or 30%*/
 }
-.bnr {
-  width: 400px;
+.tabs-wrap .tab-item {
+  width: 50%;
 }
-.bnr a,
-.bnr img {
+
+/* 비활성화 tab */
+.tabs-wrap .tab-item .tit {
+  height: 50px;
+  padding-top: 15px;
+  /*  높이값 할 때, linehight가 쉬움 
+  padding으로 넣을 경우, box-sizing: border-box 여기나 리셋에 넣어주어야함  */
+  border-bottom: 2px solid #b9a272;
+  background: #ddd;
+  text-align: center;
+  font-size: 16px;
+  /* box-sizing: border-box; */
+}
+/* 활성화 tab */
+.tabs-wrap .on .tit {
+  background: #b9a272;
+  color: #ddd;
+}
+.tabs-wrap .tab-item .cont {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 130px;
+  /* background: #dadada; */
+}
+.tabs-wrap .on .cont {
   display: block;
 }
+.lst-bbs {
+  padding-top: 13px;
+}
+.lst-bbs li::before {
+  /* a태그, inline이기에 block화 -> width 100%이기에 li 자체를 flex로 만들고 *를 inline-block */
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-top: -4px;
+  margin-right: 10px;
+  background: #000;
+}
+.lst-bbs li {
+  display: flex;
+  align-items: center;
+  /* content는 두줄 이상 시 사용 */
+}
+.lst-bbs li a {
+  /* a태그, inline이기에 block처리해줘야함 */
+  display: block;
+  line-height: 2;
+}
+.lst-bbs li a:hover {
+  text-decoration: underline;
+  /* border-buttom은 박스 디자인 시 사용 */
+}
+.lst-gallery {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 13pz;
+}
+
+.lst-gallery li {
+  width: 100px;
+  padding-top: 10px;
+}
+.lst-gallery li p {
+  /* p태그 블럭요소 = width 100% */
+  overflow: hidden;
+  /* width: 50%; */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .goto {
+  width: 340px;
   width: calc(100% / 2 - 230px);
   /* width: 340px */
 }
@@ -127,4 +202,30 @@
   background: #caa078;
   justify-content: center;
   align-items: center;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: 100px; */
+  height: 100px;
+  border-top: 1px solid #e0e0e0;
+}
+.lst-sns {
+  display: flex;
+}
+.lst-sns li {
+  margin-left: 20px;
+}
+.lst-sns a {
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  /* 일일이 link 크기 변경 어려우니 절대값 100px
+  블럭처리하기 */
+}
+.logo-foot a {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
