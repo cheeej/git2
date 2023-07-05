@@ -9,6 +9,33 @@
   <body>
     <h1>float</h1>
 
+    <ul class="box2">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+
+    <!-- 1. height :  -->
+    <!-- overflow: auto, hidden -->
+
+    <style>
+      .box2 {
+        /* overflow: auto; */
+        background: red;
+      }
+      .box2::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      .box2 li {
+        float: left;
+      }
+    </style>
+
+<br><br><br><br>
+    <!--  -->
     <div class="wrap">
       <header class="clearfix">
         <h1>logo</h1>

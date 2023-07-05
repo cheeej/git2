@@ -10,30 +10,30 @@
   color: black;
 }
 
-.clearfix::after {
+/* .clearfix::after {
   content: "";
   clear: both;
   display: block;
-}
+} */
 
-.wrap {
+/* .wrap {
   width: 1200px;
-  /* 블럭요소를 가운데 정렬하려면 마진값 0 auto */
+  블럭요소를 가운데 정렬하려면 마진값 0 auto 
   margin: 0 auto;
   background: #ddd;
-}
+} */
 
-header {
+/* header {
   padding: 20px 0;
   background: #daa0a0;
-}
+} */
 /* header::after {
   content: "";
   clear: both;
   display: block;
 } */
 
-header h1 {
+/* header h1 {
   float: left;
   background: #ffd9d9;
 }
@@ -46,7 +46,7 @@ header nav {
 header nav ul {
   background: #dbe477;
   padding: 10px 0;
-}
+} */
 
 /* header nav ul::after {
   content: "";
@@ -54,7 +54,7 @@ header nav ul {
   display: block;
 } */
 
-header nav li {
+/* header nav li {
   float: left;
   margin-left: 30px;
 }
@@ -82,6 +82,70 @@ footer .foot1 {
 footer .foot3 {
   margin-top: -26px;
   float: right;
+}
+footer .foot2 {
+  text-align: center;
+} */
+
+.wrap {
+  background: #eee;
+  margin: 0 auto;
+}
+header {
+  background: lightblue;
+}
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+header h1 {
+  float: left;
+  height: 100px;
+  padding-top: 26px;
+  background: #6e5353;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+header nav {
+  float: right;
+  background: lightcoral;
+}
+nav li {
+  float: left;
+  height: 100px;
+  padding-top: 40px;
+}
+main {
+  overflow: hidden;
+  background: lightgreen;
+}
+main .cont {
+  float: left;
+  width: 30%;
+  height: 200px;
+  margin-right: 5%;
+  background: blue;
+}
+main .cont3 {
+  margin-right: 0;
+}
+footer {
+  overflow: hidden;
+  background: #000;
+}
+footer div {
+  height: 100px;
+  line-height: 100px;
+  background: orange;
+}
+footer .foot1 {
+  float: left;
+}
+footer .foot3 {
+  float: right;
+  margin-top: -100px;
 }
 footer .foot2 {
   text-align: center;
