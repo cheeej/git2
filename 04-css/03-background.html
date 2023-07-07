@@ -18,7 +18,7 @@
   </head>
   <body>
     <h1>background</h1>
-    <strong>background-color</strong>
+    <h2>background-color</h2>
     <div class="bg1">background color</div>
     <style>
       body {
@@ -29,6 +29,115 @@
         width: 100%;
         height: 100px;
         background-color: #4de6cc;
+      }
+    </style>
+
+    <h2>background-attachment</h2>
+    <div class="box2"></div>
+    <style>
+      .box2 {
+        height: 300px;
+        background-image: url("https://images.unsplash.com/photo-1688551658117-f2be980a75b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
+        background-attachment: fixed;
+        background-size: 100% auto;
+      }
+    </style>
+
+    <h2>background-image</h2>
+    <div class="box1"></div>
+    <style>
+      .box1 {
+        /* width: 500px; */
+        height: 200vh;
+        border: 10px solid #000;
+        background-color: #fff;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+        /* 거의 no-repeat 사용, 스트라이프 등에 가끔 x,y사용  */
+        background-position: 50% 0;
+        /* 기본값 0 0 가로 세로; top left, 실무에서는 숫자로 사용 */
+        /* background-attachment: fixed; */
+        background-size: 200px;
+        /* 보통 이미지가 손상되기에 100% auto로 하나,  */
+      }
+    </style>
+
+    <h2>background-size</h2>
+    <div class="box box3"></div>
+    <br />
+    <div class="box box4"></div>
+
+    <style>
+      .box {
+        width: 700px;
+        height: 300px;
+        border: 10px solid #cfffcf;
+        background-image: url("https://avatars.githubusercontent.com/u/10627436?v=4");
+        background-repeat: no-repeat;
+      }
+      .box3 {
+        background-size: contain;
+        /* logo, icon의 경우 多 사용 */
+      }
+      .box4 {
+        background-size: cover;
+        /* 배경 이미지 : 박스를 채우는 이미지등의 경우에 사용 */
+        background-position: 0 33%;
+      }
+    </style>
+
+    <wrap>
+      <h2>Sprite</h2>
+      <div class="img-g sprite1"></div>
+      <div class="img-g sprite2"></div>
+      <br />
+      <div class="img-g sprite3"></div>
+      <br />
+      <div class="img-g sprite4"></div>
+    </wrap>
+
+    <style>
+      wrap {
+        display: flex;
+      }
+      .img-g {
+        margin-top: 50px;
+        margin-right: 10px;
+        background-image: url(./images/sprite.png);
+        background-repeat: no-repeat;
+      }
+      .sprite1 {
+        width: 136px;
+        height: 132px;
+        background-position: 0 0;
+      }
+      .sprite2 {
+        width: 38px;
+        height: 36px;
+        background-position: -140px 0;
+      }
+      .sprite3 {
+        width: 40px;
+        height: 40px;
+        background-position: -140px -40px;
+      }
+      .sprite3:hover {
+        background-position: -140px -300px;
+      }
+      .sprite4 {
+        width: 32px;
+        height: 32px;
+        background-position: -200px 0;
+        cursor: pointer;
+      }
+      .sprite4:hover {
+        background-position: -240px 0;
+      }
+      .sprite4:active {
+        background-position: -280px 0;
+      }
+      .sprite4:visited {
+        background-position: -320px 0;
       }
     </style>
   </body>
