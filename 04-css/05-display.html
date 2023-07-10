@@ -246,6 +246,82 @@
       }
     </style>
 
+    <h2>flex-grow</h2>
+    <div class="box-g box14">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <style>
+      .box14 {
+        display: flex;
+      }
+      .box14 div {
+        width: auto;
+      }
+      .box14 div:nth-child(1) {
+        flex-grow: 1;
+      }
+      .box14 div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .box14 div:nth-child(3) {
+        flex-grow: 2;
+      }
+    </style>
+
+    <h2>flex-shrink</h2>
+    <div class="box-g box15">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+
+    <style>
+      .box15 {
+        display: flex;
+      }
+      .box15 div:nth-child(3) {
+        flex-shrink: 0;
+      }
+    </style>
+
+    <h2>flex-basis</h2>
+    <div class="box-g box16">
+      <div>가</div>
+      <div>가나</div>
+      <div>가나다라</div>
+    </div>
+
+    <style>
+      .box16 {
+        display: flex;
+      }
+      .box16 div {
+        /* 1:1:2 비율로 나눌 경우,
+        flex-basis: auto;(기본값) 글자의 갯수만큼 가로 사이즈가 늘어남
+        flex-basos: 0; 글자 갯수 상관없이 비율대로 배치
+        보통 padding으로 밀어버리는 경우 多 경우에 따라 사용 */
+        flex-basis: 0;
+        width: auto;
+        text-align: center;
+        line-height: 100px;
+      }
+      .box16 div:nth-child(-n + 2) {
+        flex-grow: 1;
+      }
+      .box16 div:last-child {
+        flex-grow: 3;
+      }
+    </style>
+
     <br /><br /><br />
   </body>
 </html>
