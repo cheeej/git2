@@ -32,6 +32,9 @@
 .gnb .depth1 {
   display: flex;
 }
+.gnb .depth1 > li {
+  position: relative;
+}
 
 .gnb .depth1 > li > a {
   display: block;
@@ -51,23 +54,42 @@
              3.flex- 레이아웃 잡을 때 사용
                 여기서는 block으로 처리*/
 
-.gnb .depth1 > li > a:hover {
-  color: rgb(230, 230, 230);
-  border-bottom: 3px solid #df6d6d;
+.gnb .depth1 > li:hover > a {
+  color: rgb(136, 72, 0);
+  border-bottom: 3px solid #dfa46d;
 }
+/* .gnb .depth1 > li:last-child .depth2 {
+  border-right: 1px solid #575757;
+} */
+
+/* gnb 마우스 오버 후 */
 .gnb .depth1:hover .depth2 {
   display: block;
+  height: 200px;
+  padding: 10px 0px;
+  border-width: 1px;
 }
+/* nac depth2 */
 
 .gnb .depth2 {
-  display: none;
-  padding: 10px 0;
+  /* display: none; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  height: 0;
+  padding: 0;
   /* 무조건 패딩으로, 마진으로x */
   background: #fff;
+  border: 0px solid #ececec;
+  border-right: none;
+  transition: all 0.3s;
+  transition-timing-function: linear;
 }
 .gnb .depth2 a:hover {
-  border-bottom: 3px solid #8b3535;
-  background: rgb(211, 211, 211);
+  color: #fff;
+  background: #b48e5c;
 }
 .gnb .depth2 a {
   display: block;
