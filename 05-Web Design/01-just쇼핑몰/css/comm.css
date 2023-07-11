@@ -58,16 +58,16 @@
   color: rgb(136, 72, 0);
   border-bottom: 3px solid #dfa46d;
 }
-/* .gnb .depth1 > li:last-child .depth2 {
-  border-right: 1px solid #575757;
-} */
+.gnb .depth1 > li:last-child .depth2 {
+  border-right: 1px solid #ececec;
+}
 
 /* gnb 마우스 오버 후 */
 .gnb .depth1:hover .depth2 {
   display: block;
-  height: 170px;
-  padding: 10px 0px;
-  border-width: 1px;
+  max-height: 300px;
+  /* padding: 10px 0px; */
+  border-bottom-width: 1px;
 }
 /* nac depth2 */
 
@@ -78,14 +78,26 @@
   right: 0;
   z-index: 1000;
   overflow: hidden;
-  height: 0;
+  max-height: 0;
   padding: 0;
   /* 무조건 패딩으로, 마진으로x */
   background: #fff;
-  border: 0px solid #ececec;
+  border-bottom: 0px solid #ececec;
   border-right: none;
   transition: all 0.3s;
   transition-timing-function: linear;
+}
+.gnb .depth2::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 5px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.gnb .depth1 > li:last-child .depth2::after {
+  display: none;
 }
 .gnb .depth2 a:hover {
   color: #fff;
@@ -95,7 +107,8 @@
   display: block;
   /* block요소는 본래 100%이기에 width: 100%; 쓸 필요x  */
   text-align: center;
-  /* padding: 10px 0; */
+  /* line-height: 20px; */
+  padding: 10px 0;
   height: 40px;
   background: #fff;
   /* padding: 10px 0;뺄 경우, lien-height(높이값만큼 40px) 로 새로 가운데 정렬해줘야함 */
