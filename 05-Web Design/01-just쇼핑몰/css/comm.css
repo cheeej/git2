@@ -65,7 +65,7 @@
 /* gnb 마우스 오버 후 */
 .gnb .depth1:hover .depth2 {
   display: block;
-  height: 200px;
+  height: 170px;
   padding: 10px 0px;
   border-width: 1px;
 }
@@ -95,7 +95,7 @@
   display: block;
   /* block요소는 본래 100%이기에 width: 100%; 쓸 필요x  */
   text-align: center;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   height: 40px;
   background: #fff;
   /* padding: 10px 0;뺄 경우, lien-height(높이값만큼 40px) 로 새로 가운데 정렬해줘야함 */
