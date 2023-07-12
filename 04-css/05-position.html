@@ -142,9 +142,33 @@
         left: 50%;
         width: 200px;
         height: 200px;
+        /* old 방법 */
+        /* 일일이 수정해야하는 번거로움에 transform:translate로 적용*/
         margin-left: -100px;
         margin-top: -100px;
         background: #996e6e;
+      }
+    </style>
+
+    <h2>가운데 정렬 : transform</h2>
+    <div class="box5">
+      <div class="item"></div>
+    </div>
+
+    <style>
+      .box5 {
+        position: relative;
+        height: 500px;
+        background: #dae2e1;
+      }
+      .box5 .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20%;
+        height: 30%;
+        background: #118681;
+        transform: translate(-50%, -50%);
       }
     </style>
   </body>
