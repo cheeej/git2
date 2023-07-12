@@ -1,47 +1,50 @@
 @charset "UTF-8";
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-  text-decoration: none;
-  line-height: 1.5;
-  color: #222328;
-}
-.wrap {
-  /* wrap / header 블록요소이기에 width 100% -> 안넣어도 됨 */
-  width: 1200px;
-  margin: 0 auto;
-  /* background: #f0f0f0; */
-}
-.header {
-  height: 100px;
-  background: #fafafa;
-  display: flex;
-  justify-content: space-between; /* header에서 무조건 사용 */
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo a {
-  display: block;
-  width: 200px;
-  height: 40px;
-}
-.gnb .depth1 {
-  display: flex;
-}
-.gnb .depth1 > li {
-  position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 1.5;
+    color: #222328;
 }
 
+.wrap {
+    /* wrap / header 블록요소이기에 width 100% -> 안넣어도 됨 */
+    width: 1200px;
+    margin: 0 auto;
+    /* background: #f0f0f0; */
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* header에서 무조건 사용 */
+    height: 100px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    display: block;
+    width: 200px;
+    height: 40px;
+}
+
+.gnb .depth1 {
+    display: flex;
+    position: relative;
+}
+.gnb .depth1 > li {
+    position: relative;
+}
 .gnb .depth1 > li > a {
-  display: block;
-  height: 100px;
-  padding: 0 50px;
-  line-height: 100px;
-  text-align: center;
+    display: block;
+    height: 100px;
+    padding: 0 50px;
+    line-height: 100px;
+    /* background: lawngreen; */
+    /* border: 1px solid #000; */
+    text-align: center;
 }
 /* 마진을 넣을 경우,
   .depth1 li {
@@ -53,290 +56,276 @@
                 justify-content: center; -> text-align 안먹음//nav에 잘 사용x/
              3.flex- 레이아웃 잡을 때 사용
                 여기서는 block으로 처리*/
-
 .gnb .depth1 > li:hover > a {
-  color: rgb(136, 72, 0);
-  border-bottom: 3px solid #dfa46d;
+    /* background: #0060ff; */
+    border-bottom: 5px solid #dfa46d;
 }
 .gnb .depth1 > li:last-child .depth2 {
-  border-right: 1px solid #ececec;
+    border-right: 1px solid #ececec;
 }
-
 /* gnb 마우스 오버 후 */
 .gnb .depth1:hover .depth2 {
-  display: block;
-  max-height: 300px;
-  /* padding: 10px 0px; */
-  border-bottom-width: 1px;
+    display: block;
+    max-height: 300px;
+    /* padding: 10px 0; */
+    border-bottom-width: 1px;
 }
-/* nac depth2 */
 
+/* nav depth2 */
+/* gnb 마우스 오버 전 */
 .gnb .depth2 {
-  /* display: none; */
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  overflow: hidden;
-  max-height: 0;
-  padding: 0;
-  /* 무조건 패딩으로, 마진으로x */
-  background: #fff;
-  border-bottom: 0px solid #ececec;
-  border-right: none;
-  transition: all 0.3s;
-  transition-timing-function: linear;
+    /* display: none; */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+    max-height: 0;
+    /* padding: 0; */
+    /* 무조건 패딩으로, 마진으로x */
+    background: #fff;
+    border-bottom: 0 solid #ececec;
+    border-right: none;
+    transition: all .3s;
 }
 .gnb .depth2::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  right: 0;
-  bottom: 5px;
-  width: 1px;
-  background: rgba(0, 0, 0, 0.1);
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    bottom: 5px;
+    width: 1px;
+    background: rgba(0,0,0,0.1);
 }
 .gnb .depth1 > li:last-child .depth2::after {
-  display: none;
-}
-.gnb .depth2 a:hover {
-  color: #fff;
-  background: #b48e5c;
+    display: none;
 }
 .gnb .depth2 a {
-  display: block;
-  /* block요소는 본래 100%이기에 width: 100%; 쓸 필요x  */
-  text-align: center;
-  /* line-height: 20px; */
-  padding: 10px 0;
-  height: 40px;
-  background: #fff;
-  /* padding: 10px 0;뺄 경우, lien-height(높이값만큼 40px) 로 새로 가운데 정렬해줘야함 */
+    display: block;
+    /* block요소는 본래 100%이기에 width: 100%; 쓸 필요x  */
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+      /* padding: 10px 0;뺄 경우, lien-height(높이값만큼 40px) 로 새로 가운데 정렬해줘야함 */
 }
-/* slide */
-.slide {
-  overflow: hidden;
-  height: 300px;
-}
-.slide a,
-.slide img {
-  display: block;
-}
-.slide-wrap {
-  position: relative;
-  overflow: hidden;
-  height: 300px;
-}
-@keyframes slid-ani {
-  0% {
-    top: 0;
-  }
-  30% {
-    top: 0;
-  }
-  33% {
-    top: -300;
-  }
-  60% {
-    top: -300;
-  }
-  66% {
-    top: -600;
-  }
-  100% {
-    top: -600;
-  }
+.gnb .depth2 a:hover {
+    background-color: #b48e5c;
+    color: #fff;
 }
 
+/* slide */
+.slide-wrap a, .slide-wrap img {
+    display: block;
+}
+.slide-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
 .lst-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: slid-ani 10s alternate infinite forwards;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide-ani 9s linear alternate infinite;
+}
+@keyframes slide-ani {
+    0% {top: 0;}
+    30% {top: 0;}
+    33% {top: -300px;}
+    70% {top: -300px;}
+    73% {top: -600px;}
+    100% {top: -600px;}
 }
 
 /* contents */
 .contents {
-  display: flex;
-  justify-content: space-between;
-  height: 200px;
-  padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 /* tab */
 .tabs-wrap {
-  display: flex;
-  width: calc(100% / 2 - 230px);
-  position: relative;
-  /* width: 340px or 30%*/
+    position: relative;
+    display: flex;
+    width: calc(100% / 2 - 230px);
+     /* width: 340px or 30%*/
 }
 .tabs-wrap .tab-item {
-  width: 50%;
+    width: 50%;
 }
-
 /* 비활성화 tab */
 .tabs-wrap .tab-item .tit {
-  height: 50px;
-  padding-top: 15px;
-  /*  높이값 할 때, linehight가 쉬움 
+    height: 50px;
+    padding-top: 15px;
+      /*  높이값 할 때, linehight가 쉬움 
   padding으로 넣을 경우, box-sizing: border-box 여기나 리셋에 넣어주어야함  */
-  border-bottom: 2px solid #b9a272;
-  background: #ddd;
-  text-align: center;
-  font-size: 16px;
-  /* box-sizing: border-box; */
+    border-bottom: 2px solid #b9a272;
+    background: #ddd;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    
 }
 /* 활성화 tab */
 .tabs-wrap .on .tit {
-  background: #b9a272;
-  color: #ddd;
+    background: #b9a272;
+    color: #ddd;
 }
 .tabs-wrap .tab-item .cont {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  height: 130px;
-  /* background: #dadada; */
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 130px;
+      /* background: #dadada; */
 }
 .tabs-wrap .on .cont {
-  display: block;
+    display: block;
 }
 .lst-bbs {
-  padding-top: 13px;
-}
-.lst-bbs li::before {
-  /* a태그, inline이기에 block화 -> width 100%이기에 li 자체를 flex로 만들고 *를 inline-block */
-  content: "";
-  display: inline-block;
-  width: 3px;
-  height: 3px;
-  margin-top: -4px;
-  margin-right: 10px;
-  background: #000;
+    padding-top: 13px;
+    
 }
 .lst-bbs li {
-  display: flex;
-  align-items: center;
-  /* content는 두줄 이상 시 사용 */
+    display: flex;
+    align-items: center;
+    /* content는 두줄 이상 시 사용 */
+}
+.lst-bbs li::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-top: -4px;
+    margin-right: 10px;
+    background: #000;
+     /* a태그, inline이기에 block화 -> width 100%이기에 li 자체를 flex로 만들고 *를 inline-block */
 }
 .lst-bbs li a {
-  /* a태그, inline이기에 block처리해줘야함 */
-  display: block;
-  line-height: 2;
+    display: block;
+    line-height: 2;
+    /* a태그, inline이기에 block처리해줘야함 */
 }
 .lst-bbs li a:hover {
-  text-decoration: underline;
-  /* border-buttom은 박스 디자인 시 사용 */
-}
-.lst-gallery {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 13pz;
+    text-decoration: underline;
+    /* border-buttom은 박스 디자인 시 사용 */
 }
 
+/* 갤러리 */
+.lst-gallery {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
 .lst-gallery li {
-  width: 100px;
-  padding-top: 10px;
+    width: 100px;
 }
 .lst-gallery li p {
-  /* p태그 블럭요소 = width 100% */
-  overflow: hidden;
-  /* width: 50%; */
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* p태그 블럭요소 = width 100% */
 }
 
+
+.bnr {
+    width: 400px;
+}
+.bnr a, .bnr img {
+    display: block;
+}
 .goto {
-  width: 340px;
-  width: calc(100% / 2 - 230px);
-  /* width: 340px */
+    width: calc(100% / 2 - 230px);
+      /* width: 340px */
 }
 .goto ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 180px;
 }
 .goto li {
-  width: calc(50% - 5px);
-  height: calc(50% - 5px);
-  /* = width: 48% */
+    width: calc(50% - 5px);
+    height: calc(50% - 5px);
+    background: blue;
+    /* = width: 48% */
 }
 .goto a {
-  display: flex;
-  height: 100%;
-  background: #d8b390;
-  justify-content: center;
-  align-items: center;
+    display: block;
+    height: 100%;
+    background: #d8b390;
 }
+
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* text-align: 100px; */
-  height: 100px;
-  border-top: 1px solid #e0e0e0;
-}
-.lst-sns {
-  display: flex;
-}
-.lst-sns li {
-  margin-left: 20px;
-}
-.lst-sns a {
-  display: block;
-  height: 100px;
-  line-height: 100px;
-  /* 일일이 link 크기 변경 어려우니 절대값 100px
-  블럭처리하기 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border-top: 1px solid #e0e0e0;
+      /* text-align: 100px; */
 }
 .logo-foot a {
-  display: flex;
-  align-items: center;
-  height: 100px;
+    display: flex;
+    align-items: center;
+    height: 100px;
 }
+.lst-sns {
+    display: flex;
+}
+.lst-sns li {
+    margin-left: 20px;
+}
+.lst-sns a {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+}
+ /* 일일이 link 크기 변경 어려우니 절대값 100px
+  블럭처리하기 */
+
 /* modal */
-.modal-dimmed {
-  /*  fixed, 브라우저(view 포트) 기준*/
-  display: none;
+ /*  fixed, 브라우저(view 포트) 기준*/
   /* 후에 js.로 flex 만들어줄 예정 */
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background: rgba(0, 0, 0, 0.5);
+.modal-dimmed {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
 }
 .modal-box {
-  position: relative;
-
-  width: 500px;
-  height: 300px;
-  padding: 30px;
-  border: 1px solid #bebebe;
-  background: #f0f0f0;
-  border-radius: 10px;
-  text-align: center;
+    position: relative;
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    border: 1px solid #bebebe;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
 }
 .modal-box h3 {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-size: 24px;
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 .modal-box button {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background: #a79e8d;
-  border: none;
-  color: #f0f0f0;
-  font-size: 22px;
-  cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background: #a79e8d;
+    border-radius: 50%;
+    border: none;
+    color: #f0f0f0;
+    font-size: 22px;
+    cursor: pointer;
 }
