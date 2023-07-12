@@ -122,6 +122,38 @@
 .slide img {
   display: block;
 }
+.slide-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+@keyframes slid-ani {
+  0% {
+    top: 0;
+  }
+  30% {
+    top: 0;
+  }
+  33% {
+    top: -300;
+  }
+  60% {
+    top: -300;
+  }
+  66% {
+    top: -600;
+  }
+  100% {
+    top: -600;
+  }
+}
+
+.lst-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slid-ani 10s alternate infinite forwards;
+}
 
 /* contents */
 .contents {
