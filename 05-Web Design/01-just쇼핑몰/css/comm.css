@@ -159,6 +159,7 @@
 .contents {
   display: flex;
   justify-content: space-between;
+  height: 200px;
   padding: 10px 0;
 }
 /* tab */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tooltip</title>
+  </head>
+  <body>
+    <h1>tooltip</h1>
+    <div class="tooltip-wrap">
+      tooltip 보기
+      <div class="tooltip-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </div>
+    </div>
+
+    <style>
+      .tooltip-wrap {
+        display: inline-block;
+        position: relative;
+        margin: 100px;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(38, 116, 73);
+        background: #c2e6da;
+      }
+      .tooltip-item {
+        position: absolute;
+        bottom: -110px;
+        left: -60%;
+        display: inline-block;
+        /* inline flex과 동일 */
+        max-width: 100px;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: nomal;
+        color: #fff;
+        background: #000;
+        border-radius: 5px;
+        transform: translateX(50%);
+        /* word-break: break-all; */
+      }
+    </style>
+  </body>
+</html>
