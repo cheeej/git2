@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript 선행</title>
+  </head>
+  <body>
+    <h1>javascript</h1>
+    <h2>문자 데이터</h2>
+    <script>
+      let myName = "chej";
+      let email = "1choijia1@naver.com";
+      let hello = `안녕! ${myName}야`;
+
+      console.log(myName);
+      console.log(email);
+      console.log(hello);
+    </script>
+
+    <h2>boolean 데이터</h2>
+    <script>
+      let checked = true;
+      let isShow = false;
+
+      console.log("checked : " + checked);
+      console.log(`isShow : ${isShow}`);
+    </script>
+
+    <h2>Undefied</h2>
+    <!--  값이 할당되지 않음 -->
+    <script>
+      let Undef;
+      let object = { abc: 123 };
+      console.log(Undef);
+      console.log(object.abc);
+      console.log(object.xyz);
+    </script>
+
+    <h2>null</h2>
+    <!-- 의도적으로 비워놓음 -->
+    <script>
+      let empty = null;
+      console.log(empty);
+    </script>
+
+    <h2>객체데이터</h2>
+    <script>
+      let user = {
+        name: "chej",
+        age: 100,
+        isValid: true,
+      };
+
+      console.log(user.name);
+      console.log(user.age);
+      console.log(user.isValid);
+    </script>
+
+    <h2>배열 데이터</h2>
+    <script>
+      let fruits = ["Apple", "Banana", "Cherry"];
+
+      console.log(fruits);
+      console.log(fruits[0]);
+      console.log(fruits[1]);
+      console.log(fruits[2]);
+    </script>
+
+    <h2>변수</h2>
+    <script>
+      let a = 5;
+      const b = 10;
+
+      console.log(`a : ${a}`);
+      console.log(`b : ${b}`);
+      console.log(a + b);
+      console.log(a - b);
+      console.log(a * b);
+      console.log(a / b);
+
+      // let 재할당 가능
+      a = 50;
+      console.log(`a : ${a}`);
+      console.log(a + b);
+      console.log(a - b);
+      console.log(a * b);
+      console.log(a / b);
+
+      // const 재할당 불가
+      b = 100;
+      console.log(`b : ${b}`);
+    </script>
+  </body>
+</html>
