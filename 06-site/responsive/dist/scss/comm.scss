@@ -1,0 +1,320 @@
+@charset "UTF-8";
+@import "reset";
+@import "variables", "mixin", "fonts", "reset", "main", "contents";
+
+// .wrap {
+//   width: 1200px;
+//   margin: 0 auto;
+
+//   header {
+//     height: 100px;
+//     background: rgb(255, 241, 216);
+//   }
+// }
+
+// .wrap .slide {
+//   height: 300px;
+//   background: blue;
+// }
+
+// @import  "main", "contents";
+
+// comm.scss -
+// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
+
+// 공통
+
+.wrap {
+  padding-top: 70px;
+}
+.container {
+  padding: 0 $bothMargin;
+}
+.bg-gray {
+  background: $gray-e;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  // box-sizing: border-box;
+  // border-bottom: 1px solid $b;
+  // background: $w;
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $headerHight;
+  }
+  .head_right {
+    display: flex;
+  }
+  // .btn-g {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 40px;
+  //   width: 70px;
+  //   &::before {
+  //     font-size: 20px;
+  //     // font-family: "Font Awesome 6 free";
+  //   }
+  // }
+  .material-icons-round {
+    font-size: 30px;
+  }
+  .lst-util {
+    display: flex;
+
+    li {
+      display: flex;
+    }
+    .btn-g,
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: $headerHight;
+
+      // .btn-search::before {
+      //   content: "\f002";
+      //   font-family: "Font Awesome 6 free";
+      //   font-weight: 900;
+      //   padding: 5px;
+      // }
+      // display: flex;
+      // .btn-ham::before {
+      //   content: "\f007";
+      //   font-family: "Font Awesome 6 free";
+      //   font-weight: 500;
+      //   padding: 5px;
+      // }
+    }
+  }
+  .gnb-wrap {
+    .input-burger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      &:checked {
+        // input이 선택됬을 때
+        & + label {
+          .bar {
+            background: $txtDefault;
+            &:nth-child(2) {
+              transform: rotate(45deg) translate(4px, 4px);
+            }
+            &:nth-child(3) {
+              // display: none;
+              opacity: 0;
+            }
+            &:nth-child(4) {
+              transform: rotate(-45deg) translate(6px, -6px);
+            }
+          }
+        }
+        & ~ #gnb {
+          right: 0;
+        }
+      }
+    }
+
+    .label-burger {
+      cursor: pointer;
+      position: relative;
+      z-index: 1100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 40px;
+      height: $headerHight;
+      .bar {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: $txtDefault;
+        transition: all 0.3s;
+        // display none, block은 트렌지션 적용x
+        // 2개 이상 적용시 all -> 위치값 다시 적용
+      }
+      span {
+        &:nth-child(3) {
+          margin: 5px 0;
+        }
+      }
+    }
+    #gnb {
+      // display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      // left: 100%;
+      bottom: 0;
+      width: 100%;
+      padding: 50px;
+      background: $prim3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s;
+    }
+  }
+}
+#logo {
+  position: relative;
+  z-index: 1100;
+}
+
+// slide
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100vh;
+  text-align: center;
+  font-size: 18px;
+  background: #cfffe5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // width: 100%, height: 100% 와 동일
+    background: rgba($b, 0.3);
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// .swiper-slide__txt * {
+//   color: $w;
+// }
+
+// main
+.section-g {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  // margin: 50px 0;
+  // padding: 30px;
+  // margin-bottom: 50px;
+  // border: 1px solid $gray-9;
+  // border-radius: 10px;
+  // background: #f1ffcf;
+  .sec-tit {
+    font-size: 20px;
+    color: $b;
+  }
+  .section-contents {
+    margin-top: 20px;
+    // or tit에 margin-bottom 넣어주면 됨
+  }
+}
+
+// 이미지 게시판
+.lst-thumb-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    // width: 49%;
+    width: calc(50% - $spachingList / 2);
+    // width: calc(50% - 10px);
+    // 3단의 경우 33.333%
+    margin-bottom: $spachingList;
+    // 20px
+    .thumb-shopping {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      // height: 200px;
+      border-radius: 4px;
+      &::before {
+        content: "";
+        display: block;
+        height: 0;
+        padding-top: 100%;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 50%;
+        transition: transform 0.3s;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        border: 1px solid rgba($b, 0.06);
+        background: rgba($b, 0.03);
+      }
+    }
+  }
+}
+
+.section-shopping {
+  .txt-shopping {
+    .txt-shopping__tit {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 3px;
+      font-size: 14px;
+      color: $titDefault;
+    }
+    .txt-shopping__desc {
+      font-size: 12px;
+    }
+  }
+  a {
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// footer
+#footer {
+  margin-bottom: 200px;
+  // border-top: 1px solid $gray-9;
+  .inner {
+    border-top: 1px solid $gray-9;
+  }
+}
+
+#main {
+  .section-contents {
+    width: 100%;
+  }
+}

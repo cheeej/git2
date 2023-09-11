@@ -1,0 +1,74 @@
+// main slide top
+.slide-intro {
+  margin-top: -70px;
+  // transform: translateY(-70px);
+  .swiper-slide__txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    strong {
+      color: $w;
+      font-size: 2.1429rem;
+    }
+    p {
+      color: $w;
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+    a {
+      display: inline-block;
+      height: 30px;
+      margin-top: 20px;
+      padding: 0 20px;
+      line-height: 30px;
+      color: $w;
+      font-size: 0.8571rem;
+      border: 1px solid rgba($w, 0.5);
+      border-radius: 30px;
+    }
+  }
+}
+.lst-event {
+  li {
+    margin-bottom: 40px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 25%;
+  }
+  p {
+    margin-top: 15px;
+    text-align: center;
+    // 엄마가 100%일 경우 text aline center// 엄마가 작은 block요소일 경우, margin: 0, auto
+    // font: size 1rem;
+  }
+}
+.lst-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    padding-top: 100%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+    // transition: transform 0.3s;
+  }
+}
