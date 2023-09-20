@@ -39,13 +39,8 @@ const obj = {
   i: 2,
   j: 3,
 };
-
-// const ee = obj.e;
-// const ff = obj.f;
-// const gg = obj.g;
-
-// console.log(ee, ff, gg);
-// console.log(obj.e, obj.f, obj.g);
+// const { obj:h, obj:i, obj:j } = obj;
+// const { h, i, j } = obj;
 
 // 구조 분해 할당
 // const { h = 4, f = 5, g = 6 } = obj;
