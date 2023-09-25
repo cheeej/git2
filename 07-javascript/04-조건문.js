@@ -141,3 +141,89 @@ for (let i = 9; i > 0; i--) {
   }
   console.log(i);
 }
+
+// 반환 및 종료
+function getGrade(score) {
+  if (score === 100) {
+    // A+
+    return "A+";
+  } else if (score >= 90) {
+    // A
+    return "A";
+  } else if (score >= 80) {
+    // B
+    return "B";
+  } else if (score >= 70) {
+    // C
+    return "C";
+  } else if (score >= 60) {
+    // D
+    return "D";
+  } else {
+    // F
+    return "F";
+  }
+}
+console.log(getGrade(100));
+console.log(getGrade(70));
+
+// 매게변수 패턴
+function sum(x, y = 1) {
+  return x + y;
+}
+
+console.log(sum(1, 5));
+console.log(sum(1));
+
+// 객체 구조분해 할당
+const user = {
+  name: "winter",
+  age: 2,
+  email: "1choijia1@naver.com",
+};
+
+// function getName(user) {
+//   const { name } = user;
+//   return name;
+// }
+
+function getName({ name }) {
+  return name;
+}
+function getEmail({ email = "이메일이 없습니다." }) {
+  return email;
+}
+
+console.log(getName(user));
+console.log(getEmail(user));
+
+// 배열의 구조 분해 할당
+const animals = ["dog", "cat", "monky"];
+
+// 두번째 요소 반환하는 기능
+// function getSecond(a, b, c) {
+//   return a;
+// }
+function getSecond([, b = "두 번째 요소가 없습니다.", c]) {
+  return [b, c];
+}
+
+console.log(getSecond(animals));
+
+// 화살표 함수
+// function 함수이름(매개변수) {실행문}
+// (매개변수) => {실행문}
+
+function hello() {
+  console.log("hello");
+}
+const hello11 = function () {
+  console.log("hello11");
+};
+const hello12 = () => {
+  console.log("hello12");
+};
+
+hello();
+hello11();
+hello12();
