@@ -227,3 +227,49 @@ const hello12 = () => {
 hello();
 hello11();
 hello12();
+
+// sum 함수 //
+
+function sum1(x, y) {
+  return x + y;
+}
+
+// 표현식
+const sum2 = function (x, y) {
+  return x + y;
+};
+
+// 화살표 함수
+const sum3 = (x, y) => {
+  return x + y;
+};
+// 화살표 함수 축약
+const sum4 = (x, y) => x + y;
+
+console.log(sum1(1, 2));
+console.log(sum2(1, 2));
+console.log(sum3(1, 2));
+
+// 화살표 함수의 예시
+const a = () => {};
+const b = (x) => {};
+const c = (x, y) => {};
+const d = (x) => {
+  return x + x;
+};
+
+const e = (x) => x + x;
+const f = (x) => {
+  console.log(x);
+  return x * x;
+};
+
+const g = () => {
+  return { a: 1 };
+};
+const h = () => ({ a: 1 });
+
+const i = () => {
+  return [1, 2];
+};
+const i = () => [1, 2];
