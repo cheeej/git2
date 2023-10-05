@@ -38,6 +38,11 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./dist/css/comm.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -47,6 +52,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -55,7 +72,7 @@
         <nav class="navbar navbar-expand-sm">
           <div class="container-fluid">
             <h1>
-              <a class="navbar-brand" href="#">Logo</a>
+              <a class="navbar-brand" href="#">SIDMUL</a>
             </h1>
             <button
               class="navbar-toggler"
@@ -84,103 +101,62 @@
                   <a class="nav-link" href="#contect">contect</a>
                 </li>
               </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#"
+                    ><span class="glyphicon glyphicon-user"></span> Sign Up</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="glyphicon glyphicon-log-in"></span> Login</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
       </header>
       <main id="main">
-        <div id="jumbotron" class="p-5 bg-cj text-white">
+        <div id="jumbotron" class="bg-cj text-white">
           <!-- mt-4 rounded-->
           <div class="container">
-            <h1>choi eun ji</h1>
-            <p>Cheej who wants to go abroad</p>
+            <h2>Min Junggi <em>피브로블라스트앰플</em></h2>
+            <p>
+              동물성 원료, 동물 유해 성분을 배제한 비건(VEGAN)인증 화장품
+              <br />지금까지 볼수 없었던 “rh-bFGF 20PPM 99%”의 바이오
+              기능성으로<br />
+              민감한 붉은 피부/ 깊은 주름 피부/ 탄력없이 처진피부에 활기를
+              불어넣다.
+            </p>
           </div>
         </div>
-        <section id="about" class="sec-g">
+        <section id="Contents" class="sec-c">
           <div class="container">
-            <div class="title d-flex justify-content-center mb-5">
-              <h2
-                data-aos="fade-up"
-                data-aos-offset="50"
-                data-aos-delay="50"
-                data-aos-duration="300"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-              >
-                about
-              </h2>
+            <div>집중케어</div>
+            <div>클렌징</div>
+            <div>스킨<em>에센스</em></div>
+            <div>로션크림</div>
+            <div>아이케어<em>마스크팩</em></div>
+            <div>헤어바디</div>
+            <div>메이크업</div>
+            <div>남성라인</div>
+          </div>
+        </section>
+        <section id="about" class="sec-a">
+          <div class="container">
+            <div class="bnr2">
+              <h2>SIDMOOL NATURE LOVE CAMPAIGN</h2>
             </div>
-            <div class="row">
-              <!-- sm : 768px 기준 -->
-              <div class="col-sm-8">
-                <h2
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  제목
-                </h2>
-                <p
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolorem animi necessitatibus et modi repellat aut, ea tenetur
-                  alias eveniet doloribus laudantium, iure quasi impedit itaque,
-                  officia dolore error perferendis hic.
-                </p>
-              </div>
-              <div class="col-sm-4">
-                <h2
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  제목
-                </h2>
-                <p
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Dolorem animi necessitatibus et modi repellat aut, ea tenetur
-                  alias eveniet doloribus laudantium, iure quasi impedit itaque,
-                  officia dolore error perferendis hic.
-                </p>
-              </div>
-            </div>
+            <a href="#"></a>
           </div>
         </section>
         <section id="service" class="sec-g bg-light">
           <div class="container">
-            <div class="title d-flex justify-content-center mb-5">
+            <div class="title mb-5">
               <h2
                 data-aos="fade-up"
-                data-aos-offset="50"
+                data-aos-offset="40"
                 data-aos-delay="50"
                 data-aos-duration="300"
                 data-aos-easing="ease-in-out"
@@ -188,100 +164,57 @@
                 data-aos-once="false"
                 data-aos-anchor-placement="top-center"
               >
-                service
+                이런 상품 어떠세요?
               </h2>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <span class="glyphicon glyphicon-off logo-small"></span>
-                <h4
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  제목
-                </h4>
-                <p
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                  rem ea earum nobis hic commodi aut consectetur excepturi dicta
-                  corporis rerum, tempora nihil doloribus officia! Iste
-                  architecto nemo vero molestiae!
-                </p>
-              </div>
-              <div class="col-sm-4">
-                <span class="glyphicon glyphicon-heart logo-small"></span>
-                <h4
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  제목
-                </h4>
-                <p
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  expedita fugit quos inventore. Perspiciatis voluptatem autem
-                  nulla ducimus ipsum blanditiis voluptate aperiam atque,
-                  ratione voluptatum aspernatur quaerat, soluta quae
-                  repellendus!
-                </p>
-              </div>
-              <div class="col-sm-4">
-                <span class="glyphicon glyphicon-lock logo-small"></span>
-                <h4
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  제목
-                </h4>
-                <p
-                  data-aos="fade-up"
-                  data-aos-offset="50"
-                  data-aos-delay="50"
-                  data-aos-duration="400"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Facilis possimus expedita voluptatibus, iure iste nam vel
-                  cumque aut cupiditate, quam nesciunt asperiores temporibus
-                  magnam deleniti amet sunt provident, velit veniam.
-                </p>
+              <!-- Swiper -->
+              <div class="swiper">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#"
+                        ><img src="./dist/image/slide1.jpg" alt="상품1"
+                      /></a>
+                      <div class="Buy">
+                        <div class="cont-text">
+                          <em>피부의 오아시스</em>
+                          <p>내 피부에 수분가득</p>
+                          <p>￦ 29,000원</p>
+                        </div>
+                        <button>구매하기</button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <!-- Initialize Swiper -->
+                <script>
+                  var swiper = new Swiper(".mySwiper", {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+
+                    freeMode: true,
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                      744: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                      },
+                    },
+                  });
+                </script>
               </div>
             </div>
           </div>
