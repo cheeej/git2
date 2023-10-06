@@ -135,11 +135,14 @@ legend {
   }
 }
 
-.sliding-img {
+.aos-img {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.sliding-img {
   width: 102vw;
   height: 600px;
   background: url(../image/slider-img1.png) no-repeat 50% 50%;

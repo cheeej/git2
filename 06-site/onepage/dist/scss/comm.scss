@@ -140,14 +140,18 @@ $md: 768px;
     }
   }
 }
+.aos-img {
+  position: absolute;
+  top: 0;
+  // left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .sliding-img {
   @media screen and (max-width: 700px) {
     top: -50px;
   }
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+
   width: 102vw;
   height: 600px;
   background: url(../image/slider-img1.png) no-repeat 50% 50%;
