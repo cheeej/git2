@@ -25,7 +25,7 @@ legend {
 }
 
 .sec-g {
-  padding: 200px 0;
+  padding: 200px 100px;
 }
 
 .wrap {
@@ -44,6 +44,7 @@ legend {
 #jumbotron {
   height: 65vh;
   position: relative;
+  overflow-x: hidden;
   background: url(../image/banner1.png) 20% 30% no-repeat;
 }
 #jumbotron .container {
@@ -65,7 +66,7 @@ legend {
 }
 
 #Contents {
-  padding: 100px 0;
+  padding: 100px 0 10px;
 }
 #Contents .container {
   display: flex;
@@ -103,7 +104,7 @@ legend {
   background: url(../image/bnr2.png) no-repeat 40% 100%;
 }
 #about .sec-a {
-  padding: 0 0 200px;
+  padding-bottom: 300px;
 }
 #about h2 {
   position: absolute;
@@ -120,67 +121,323 @@ legend {
   }
 }
 
-.swiper {
-  padding: 30px;
-  width: 100%;
-  height: 60vw;
-  overflow: visible;
+.service {
+  display: flex;
+  margin: 0 auto;
 }
-@media screen and (max-width: 744px) {
-  .swiper {
-    padding: 30px 0;
+
+.carousel-cont {
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  .carousel-cont h2 {
+    display: none;
   }
 }
-.swiper .swiper-wrapper {
-  overflow: hidden;
+
+.sliding-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 102vw;
+  height: 600px;
+  background: url(../image/slider-img1.png) no-repeat 50% 50%;
+  opacity: 0.5;
 }
-.swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+@media screen and (max-width: 700px) {
+  .sliding-img {
+    top: -50px;
+  }
 }
-.swiper .swiper-slide img {
-  display: block;
-  width: 100%;
+
+/* Carousel infini */
+.awk-carousel-container {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding-bottom: 3.125rem;
+  margin: 100px 0 25px 0;
+  padding: 0;
+  position: relative;
 }
-@media screen and (max-width: 744px) {
-  .swiper .swiper-slide img {
-    padding-bottom: 10px;
+@media screen and (max-width: 700px) {
+  .awk-carousel-container {
+    display: none;
   }
 }
-.swiper .swiper .swiper-button-prev {
-  left: -50px;
+.awk-carousel-container .awk-buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
 }
-.swiper .swiper-button-next {
-  right: -50px;
+.awk-carousel-container .awk-prev {
+  position: absolute;
+  z-index: 999999;
+  width: 35px;
+  left: 10px;
+  top: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  font-size: 25px;
 }
-.swiper .cont-text {
+.awk-carousel-container .awk-prev:hover {
+  opacity: 1;
+}
+.awk-carousel-container .awk-next {
+  position: absolute;
+  z-index: 999999;
+  width: 35px;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  font-size: 25px;
+}
+.awk-carousel-container .awk-next:hover {
+  opacity: 1;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
+.fa-arrow-left:before {
+  content: "\f060";
+}
+
+.awk-circular-carousel {
+  position: relative;
+  height: 105px;
+  top: 0;
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  /* List */
+}
+.awk-circular-carousel div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+  cursor: pointer;
+}
+.awk-circular-carousel div span {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 400px;
+  transition: width 1s;
+  font-size: 72px;
+  color: #333333;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: 1s ease;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
-.swiper .cont-text p {
-  font-size: 1rem;
-  display: block;
-  color: #000;
+.awk-circular-carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-50%);
 }
-@media screen and (max-width: 744px) {
-  .swiper .cont-text p {
-    font-size: 0.75rem;
+.awk-circular-carousel div.hideLeft span {
+  font-size: 12px;
+}
+.awk-circular-carousel div.hideLeft p {
+  display: flex;
+  flex-direction: column;
+}
+.awk-circular-carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-50%);
+}
+.awk-circular-carousel div.hideRight span {
+  font-size: 12px;
+}
+.awk-circular-carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(12px) translateX(-50%);
+}
+.awk-circular-carousel div.prev span {
+  font-size: 50px;
+}
+.awk-circular-carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(12px) translateX(-50%);
+  opacity: 0.7;
+}
+.awk-circular-carousel div.prevLeftSecond span {
+  font-size: 25px;
+}
+.awk-circular-carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(12px) translateX(-50%);
+}
+.awk-circular-carousel div.selected span {
+  font-size: 75px;
+}
+.awk-circular-carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(12px) translateX(-50%);
+}
+.awk-circular-carousel div.next span {
+  font-size: 50px;
+}
+.awk-circular-carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(12px) translateX(-50%);
+  opacity: 0.7;
+}
+.awk-circular-carousel div.nextRightSecond span {
+  font-size: 25px;
+}
+.awk-circular-carousel .awk-liste-marques {
+  width: 600px;
+  opacity: 0;
+}
+.awk-circular-carousel .awk-liste-marques.visible {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+.awk-circular-carousel .awk-liste-marques .awk-row {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.awk-circular-carousel .awk-liste-marques .awk-row .awk-col {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.3333333333% - 3px);
+  font-size: 0;
+  text-align: center;
+}
+.awk-circular-carousel .awk-liste-marques .awk-row .awk-col a {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333333;
+  padding: 5px;
+}
+
+#info-main {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+#info-main div {
+  display: inline-block;
+}
+#info-main .bigger {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 800;
+  padding: 20px;
+  text-transform: uppercase;
+  color: #202020;
+  display: inline-block;
+  position: relative;
+}
+#info-main .text {
+  max-width: 600px;
+  width: 100%;
+  line-height: 24px;
+  text-align: left;
+  color: #404040;
+  padding: 20px;
+  text-align: center;
+}
+#info-main .text.txt-center {
+  text-align: center;
+}
+#info-main .text a {
+  color: #a9c9a0;
+}
+#info-main .has-animation {
+  position: relative;
+}
+#info-main .has-animation p,
+#info-main .has-animation img {
+  opacity: 0;
+}
+#info-main .has-animation.animate-in p,
+#info-main .has-animation.animate-in img {
+  animation: textHidden 0.1s 1.1s forwards;
+}
+#info-main .has-animation.animate-in:before, #info-main .has-animation.animate-in:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 10;
+}
+#info-main .has-animation.animate-in:before {
+  background-color: #a9c9a0;
+}
+#info-main .has-animation.animate-in:after {
+  background-color: #202020;
+  animation-delay: 0.5s;
+}
+#info-main .has-animation.animation-ltr.animate-in:before {
+  animation: revealLTR 1.8s ease;
+}
+#info-main .has-animation.animation-ltr.animate-in:after {
+  animation: revealLTR 1s 0.6s ease;
+}
+#info-main .has-animation.animation-rtl.animate-in:before {
+  animation: revealRTL 1.8s ease;
+}
+#info-main .has-animation.animation-rtl.animate-in:after {
+  animation: revealRTL 1s 0.6s ease;
+}
+@keyframes revealRTL {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  65% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
   }
 }
-.swiper button {
-  font-size: 0.9rem;
-  padding: 5px;
-  border: none;
+@keyframes revealLTR {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  65% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes textHidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :root,

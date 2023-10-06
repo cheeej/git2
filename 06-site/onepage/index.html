@@ -42,7 +42,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./dist/css/comm.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -51,9 +54,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <script
       type="text/javascript"
@@ -63,7 +64,7 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script defer src="./dist/js/comm.js"></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -152,6 +153,185 @@
           </div>
         </section>
         <section id="service" class="sec-g bg-light">
+          <div class="carousel-cont">
+            <div class="title mb-5">
+              <h2
+                data-aos="fade-up"
+                data-aos-offset="40"
+                data-aos-delay="50"
+                data-aos-duration="300"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+              >
+                어떤 상품을 찾으시나요?
+              </h2>
+              <div class="carousel-count">
+                <!-- Carousel alphabet -->
+                <div id="awk-carousel-container" class="awk-carousel-container">
+                  <!-- Items -->
+                  <div id="awk-circular-carousel" class="awk-circular-carousel">
+                    <div data-ajax-url="16" class="hideLeft">
+                      <span>Q</span>
+                    </div>
+
+                    <div data-ajax-url="17" class="hideLeft">
+                      <span>R</span>
+                    </div>
+
+                    <div data-ajax-url="18" class="hideLeft">
+                      <span>S</span>
+                    </div>
+
+                    <div data-ajax-url="19" class="hideLeft">
+                      <span>T</span>
+                    </div>
+
+                    <div data-ajax-url="20" class="hideLeft">
+                      <span>U</span>
+                    </div>
+
+                    <div data-ajax-url="21" class="hideLeft">
+                      <span>V</span>
+                    </div>
+
+                    <div data-ajax-url="22" class="hideLeft">
+                      <span>W</span>
+                    </div>
+
+                    <div data-ajax-url="23" class="hideLeft">
+                      <span>X</span>
+                    </div>
+
+                    <div data-ajax-url="24" class="prevLeftSecond">
+                      <span>Y</span>
+                    </div>
+
+                    <div data-ajax-url="25" class="prev">
+                      <span>Z</span>
+                    </div>
+
+                    <div data-ajax-url="0" class="selected">
+                      <span>A</span>
+                    </div>
+
+                    <div data-ajax-url="1" class="next">
+                      <span>B</span>
+                    </div>
+
+                    <div data-ajax-url="2" class="nextRightSecond">
+                      <span>C</span>
+                    </div>
+
+                    <div data-ajax-url="3" class="hideRight">
+                      <span>D</span>
+                    </div>
+
+                    <div data-ajax-url="4" class="hideRight">
+                      <span>E</span>
+                    </div>
+
+                    <div data-ajax-url="5" class="hideRight">
+                      <span>F</span>
+                    </div>
+
+                    <div data-ajax-url="6" class="hideRight">
+                      <span>G</span>
+                    </div>
+
+                    <div data-ajax-url="7" class="hideRight">
+                      <span>H</span>
+                    </div>
+
+                    <div data-ajax-url="8" class="hideRight">
+                      <span>I</span>
+                    </div>
+
+                    <div data-ajax-url="9" class="hideRight">
+                      <span>J</span>
+                    </div>
+
+                    <div data-ajax-url="10" class="hideRight">
+                      <span>K</span>
+                    </div>
+
+                    <div data-ajax-url="11" class="hideRight">
+                      <span>L</span>
+                    </div>
+
+                    <div data-ajax-url="12" class="hideRight">
+                      <span>M</span>
+                    </div>
+
+                    <div data-ajax-url="13" class="hideRight">
+                      <span>N</span>
+                    </div>
+
+                    <div data-ajax-url="14" class="hideRight">
+                      <span>O</span>
+                    </div>
+
+                    <div data-ajax-url="15" class="hideRight">
+                      <span>P</span>
+                    </div>
+                  </div>
+                  <!-- Controles -->
+                  <div class="awk-prev"><i class="fa fa-arrow-left"></i></div>
+                  <div class="awk-next"><i class="fa fa-arrow-right"></i></div>
+                </div>
+              </div>
+              <div class="sliding-img">
+                <a href="#"></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="info-main" class="sec-g bg-light">
+          <br />
+          <div class="has-animation animation-ltr" data-delay="10">
+            <p class="bigger">Reveal Animation</p>
+          </div>
+
+          <br />
+          <br />
+
+          <div class="has-animation animation-rtl" data-delay="1000">
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <br />
+          <br />
+          <div class="has-animation animation-ltr" data-delay="1500">
+            <p class="text txt-center">
+              V2 <a href="http://codepen.io/antho-fsy/pen/gWjJBQ">here</a>
+              <br />
+              Scroll Reveal Animation
+            </p>
+          </div>
+          <br />
+          <br />
+          <div class="has-animation animation-rtl" data-delay="2000">
+            <img
+              src="https://images.prismic.io/figaroimmo/943be1d1-6e3a-4c59-a5f1-97ce8b6ea147_lyon-confinement.jpg?auto=compress,format&rect=0,0,1000,667&w=720&h=480"
+              width="600"
+            />
+          </div>
+
+          <br />
+
+          <div class="has-animation animation-ltr" data-delay="4000">
+            <p class="bigger">END ☺</p>
+          </div>
+        </section>
+        <section id="info" class="sec-g bg-light">
           <div class="container">
             <div class="title mb-5">
               <h2
@@ -164,61 +344,13 @@
                 data-aos-once="false"
                 data-aos-anchor-placement="top-center"
               >
-                이런 상품 어떠세요?
+                SIDMOOL is love
               </h2>
-              <!-- Swiper -->
-              <div class="swiper">
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <a href="#"
-                        ><img src="./dist/image/slide1.jpg" alt="상품1"
-                      /></a>
-                      <div class="Buy">
-                        <div class="cont-text">
-                          <em>피부의 오아시스</em>
-                          <p>내 피부에 수분가득</p>
-                          <p>￦ 29,000원</p>
-                        </div>
-                        <button>구매하기</button>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
-                  </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-pagination"></div>
-                </div>
-                <!-- Initialize Swiper -->
-                <script>
-                  var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-
-                    freeMode: true,
-                    navigation: {
-                      nextEl: ".swiper-button-next",
-                      prevEl: ".swiper-button-prev",
-                    },
-                    breakpoints: {
-                      744: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                      },
-                    },
-                  });
-                </script>
-              </div>
             </div>
           </div>
         </section>
+        <section id="play" class="sec-g"></section>
+
         <section id="portfolio" class="sec-g">
           <div class="title d-flex justify-content-center mb-5">
             <h2
